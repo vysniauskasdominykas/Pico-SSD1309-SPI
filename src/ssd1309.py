@@ -61,8 +61,6 @@ class SSD1309SPI(framebuf.FrameBuffer):
         
         self.frame_data = bytearray(self.DISPLAY_WIDTH * self.DISPLAY_HEIGHT // 8)
         super().__init__(self.frame_data, self.DISPLAY_WIDTH, self.DISPLAY_HEIGHT, framebuf.MONO_VLSB)
-        #self.frame_buffer = framebuf.FrameBuffer(self.frame_data, self.DISPLAY_WIDTH, self.DISPLAY_HEIGHT, framebuf.MONO_VLSB)
-        #self.frame_buffer.fill(0x00)
         
         self.pin_chip_select = machine.Pin(gpio_chip_select, mode=machine.Pin.OUT, value=1)
         self.pin_data_command = machine.Pin(gpio_data_command, mode=machine.Pin.OUT, value=0)
