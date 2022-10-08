@@ -91,9 +91,9 @@ class SSD1309SPI(framebuf.FrameBuffer):
         self.write_command(SSD1309_SET_MULTIPLEX_RATIO, value=self.DISPLAY_HEIGHT-1)
         self.write_command(SSD1309_SET_MEMORY_ADDRESSING_MODE, value=0x00)
         
-        self.write_command(SSD1309_SET_ENTIRE_DISPLAY_RESUME_CONTENT);
-        self.write_command(SSD1309_SET_INVERSE_DISPLAY_OFF);
-        self.write_command(SSD1309_SET_DISPLAY_ON);
+        self.write_command(SSD1309_SET_ENTIRE_DISPLAY_RESUME_CONTENT)
+        self.write_command(SSD1309_SET_INVERSE_DISPLAY_OFF)
+        self.write_command(SSD1309_SET_DISPLAY_ON)
         
     def write_command(self, command, value=None):
         self.pin_data_command.value(0)
